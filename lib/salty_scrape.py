@@ -114,9 +114,9 @@ def bet(session, betting_data):
 
     #add players to db if they do not exist yet
     if player1 not in betting_data:
-        betting_data[p1] = Character()
+        betting_data[player1] = Character()
     if player2 not in betting_data:
-        betting_data[p2] = Character()
+        betting_data[player2] = Character()
 
     player1Elo = betting_data[player1].elo
     player2Elo = betting_data[player2].elo
