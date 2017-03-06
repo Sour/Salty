@@ -1,11 +1,15 @@
 import pickle
 from character import Character
 def saveBettingData(betting_data):
-    pickle.dump(open('betting_data_v2.pickle', 'wb'))
+    with open('betting_data_v2.pickle','wb') as file:
+        pickle.dump(betting_data, file)
+        file.close()
 
 def loadBettingData():
-    betting_data = pickle.load(open('betting_data_v2.pickle', 'rb'))
-    return betting_data
+    with open('betting_data_v2.pickle', 'rb') as file:
+        betting_data = pickle.load(file)
+        file.close()
+        return betting_data
 
 def loadLoginCredentials():
     with open('leechy.key', 'r') as file:
