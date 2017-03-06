@@ -1,4 +1,3 @@
-import os
 import lib
 from lib.salty_scrape import openSaltySession, waitForMatchEnd, waitForMatchStart, bet, postBet, checkWinner
 from lib.salty_file_io import saveBettingData, loadBettingData, loadLoginCredentials
